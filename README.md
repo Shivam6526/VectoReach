@@ -1,5 +1,6 @@
 # VectoReach
-VectoReach is a Smart Ads Targeting system built by fusing text and image intelligence to deliver the right ad, every time. This project was built for Bigquery AI Hackathon 2025.
+VectoReach is a Smart Ads Targeting system built by fusing text and image intelligence to deliver the right ad, every time. 
+This project was built for Bigquery AI Hackathon 2025: https://www.kaggle.com/competitions/bigquery-ai-hackathon under **_Approach 2: The Semantic Detective_**.
 
 # Project Description
 VectoReach is an AI-powered ad targeting platform that combines multimodal embeddings(text + image) with vector search to deliver highly relevant ads.Unlike traditional systems that rely on keywords or manual tagging, VectoReach understands both the ad copy and the visual creative, mapping them into a shared semantic space using Google Cloud’sVertex AI Multimodal Embedding model. 
