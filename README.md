@@ -16,7 +16,7 @@ seamlessly in real-time recommendation and ad-serving pipelines.
 * python3 env
 * Google Cloud Account
     - Create a project in Bigquery -> then create dataset "semantic_ads_targeting"
-    - Create these buckets in Cloud Storage "semantic-product-images", "semantic-ads-targeting" & a bucket where images would be stored.
+    - Create these buckets in Cloud Storage `semantic-ads-targeting` (to keep data csv files) & `semantic-product-images` (to keep images        for object table creation).
 
 # Details about data used and generated from pipelines (for Text based embedding)
 **Source**
