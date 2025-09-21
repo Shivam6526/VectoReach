@@ -48,10 +48,17 @@ We are good to test Keyword vs Semantic Ads Targeting using text based embedding
 * **Note**: **_Current pipeline put_images_in_gcs_from_url.py will do this for all 420K rows in target_ads, which will take huge time
   for this demo,I have taken only 10% of that somewhere around 40k and ran it_**.
 * Once done, create objects table first using ads_images_objects_table_40k.sql
-* Create a new connection using multimodal endpoint using image_multimodal_model.sql
+* Create (or Reuse) connection and create model using multimodal endpoint with image_multimodal_model.sql
 * Generate ads images embeddings using ads_image_embeddings_multimodal_40k.sql
 * Create a final embeddings table which has both ad_text and ad_image embeddings for each ad_id using target_ads_multimodal_embeddings_40k.sql
 
 We are good to test Keyword vs Semantic Ads Targeting using text based embedding now!
 
 `streamlit run target_ads_multimodal_based.py`
+
+# For a quick demo, you can use my data from Kaggle datasets
+* Create source tables from section `bigquery_create_table_ddls` and then load data from here:     https://www.kaggle.com/datasets/sinshib/ecommerce-users-user-events-and-ads-data
+* Then, create connection, text embedding model and both the embeddings table: `user_profiles_with_embeddings_primary` & `target_ads_embeddings` -> You can test **Ads Targeting using ad_text embeddings** now.
+* For multimodal test, download images from here: https://www.kaggle.com/datasets/sinshib/ecommerce-product-ads-images-with-product-id-tag -> Put them in GCS bucket -> Create objects table on top of it `ads_images_objects_table_40k`.
+* Create (or Reuse) connection, multimodal model and then the table `ads_image_embedding_multimodal_40k`
+* Create `target_ads_multimodal_embeddings_40k table` -> You can test **Ads Targeting using ad_text + ad_image embeddings** now.
